@@ -19,8 +19,9 @@ function deleteSchool(id){
   return Schools.findByIdAndDelete(id)
 }
 
-function editSchool(id,nameSchool,enrrolmentDate,card,typePlan,qtyUsers){
-  return Schools.findByIdAndUpdate(id,{nameSchool,enrrolmentDate,card,typePlan,qtyUsers})
+function editSchool(id,object){
+  console.log(object)
+  return Schools.findByIdAndUpdate(id,object)
 }
 
 module.exports = {

@@ -10,7 +10,7 @@ const schema = new mongoose.Schema({
     required: true
   },
   card: {
-    type: Number,
+    type: String,
     required: true
   },
   typePlan: {

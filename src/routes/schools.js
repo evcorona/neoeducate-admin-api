@@ -45,12 +45,11 @@ router.delete('/:id', authMiddleware, async (request, response) => {
 })
 
 router.patch('/:id', authMiddleware, async (request, response) => {
-  const { nameSchool, enrrolmentDate, card, typePlan, qtyUsers } = request.body
-  const schoolUpdated = await schools.editSchool(request.params.id, nameSchool, enrrolmentDate, card, typePlan, qtyUsers)
+  const schoolUpdated = await schools.editSchool(request.params.id, request.body)
 
   response.json({
     success: true,
-    message: 'Updated'
+    message: 'Updated',
   })
 })
 
