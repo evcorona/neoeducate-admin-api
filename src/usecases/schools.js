@@ -20,7 +20,7 @@ function deleteSchool(id){
 }
 
 function editSchool(id,nameSchool,enrrolmentDate,card,typePlan,qtyUsers){
-  return Schools.findByIdAndUpdate({id,nameSchool,enrrolmentDate,card,typePlan,qtyUsers})
+  return Schools.findByIdAndUpdate(id,{nameSchool,enrrolmentDate,card,typePlan,qtyUsers})
 }
 
 module.exports = {

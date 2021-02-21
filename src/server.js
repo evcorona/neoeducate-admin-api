@@ -16,7 +16,7 @@ server.use('/auth',authRouter)
 
 server.get('/', (request,response) => {
   response.json({
-    sucess: true,
+    success: true,
     message: 'neoeducateAPI.vxcrown'
   })
 })
